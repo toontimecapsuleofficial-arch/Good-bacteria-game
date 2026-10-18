@@ -1,0 +1,962 @@
+{
+  "meta": {
+    "total_files": 445,
+    "total_size_mb": 20.69,
+    "standard_sprite_resolution": "512x512",
+    "arena_resolution_landscape": "1679x937",
+    "arena_resolution_portrait": "937x1679",
+    "pivots": {
+      "character": [
+        0.5,
+        0.0
+      ],
+      "enemy": [
+        0.5,
+        0.0
+      ],
+      "boss": [
+        0.5,
+        0.0
+      ],
+      "projectile": [
+        0.5,
+        0.5
+      ],
+      "muzzle": [
+        0.15,
+        0.5
+      ],
+      "impact": [
+        0.5,
+        0.5
+      ],
+      "ui_bar_fill": [
+        0.0,
+        0.5
+      ],
+      "ui_frame": [
+        0.5,
+        0.5
+      ]
+    },
+    "nine_slice_borders_512": {
+      "ui_panel_popup_main": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "ui_panel_popup_dark": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "ui_card_shop_frame": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "ui_card_dim_overlay": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "ui_bubble_toast": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "ui_bubble_tutorial": [
+        40,
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "characters": {
+    "bacillus": {
+      "role": "tank",
+      "weapon": "rivet_slug",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_tank.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/bacillus/character/bacillus_guard_lv1.png",
+        "lv2": "assets/good_bacteria/bacillus/character/bacillus_guard_lv2.png",
+        "lv3": "assets/good_bacteria/bacillus/character/bacillus_guard_lv3.png",
+        "lv4": "assets/good_bacteria/bacillus/character/bacillus_guard_lv4.png",
+        "lv5": "assets/good_bacteria/bacillus/character/bacillus_guard_lv5.png",
+        "lv6": "assets/good_bacteria/bacillus/character/bacillus_guard_lv6.png",
+        "lv7": "assets/good_bacteria/bacillus/character/bacillus_guard_lv7.png",
+        "lv8": "assets/good_bacteria/bacillus/character/bacillus_guard_lv8.png"
+      }
+    },
+    "bifido": {
+      "role": "sniper",
+      "weapon": "ice_shard",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_sniper.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/bifido/character/bifido_snipe_lv1.png",
+        "lv2": "assets/good_bacteria/bifido/character/bifido_snipe_lv2.png",
+        "lv3": "assets/good_bacteria/bifido/character/bifido_snipe_lv3.png",
+        "lv4": "assets/good_bacteria/bifido/character/bifido_snipe_lv4.png",
+        "lv5": "assets/good_bacteria/bifido/character/bifido_snipe_lv5.png",
+        "lv6": "assets/good_bacteria/bifido/character/bifido_snipe_lv6.png",
+        "lv7": "assets/good_bacteria/bifido/character/bifido_snipe_lv7.png",
+        "lv8": "assets/good_bacteria/bifido/character/bifido_snipe_lv8.png"
+      }
+    },
+    "hybrid": {
+      "role": "shooter",
+      "weapon": "twin_bolts",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_shooter.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/hybrid/character/hybrid_lv1.png",
+        "lv2": "assets/good_bacteria/hybrid/character/hybrid_lv2.png",
+        "lv3": "assets/good_bacteria/hybrid/character/hybrid_lv3.png",
+        "lv4": "assets/good_bacteria/hybrid/character/hybrid_lv4.png",
+        "lv5": "assets/good_bacteria/hybrid/character/hybrid_lv5.png",
+        "lv6": "assets/good_bacteria/hybrid/character/hybrid_lv6.png",
+        "lv7": "assets/good_bacteria/hybrid/character/hybrid_lv7.png",
+        "lv8": "assets/good_bacteria/hybrid/character/hybrid_lv8.png"
+      }
+    },
+    "lactobacillus": {
+      "role": "support",
+      "weapon": "bubble",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_support.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv1.png",
+        "lv2": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv2.png",
+        "lv3": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv3.png",
+        "lv4": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv4.png",
+        "lv5": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv5.png",
+        "lv6": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv6.png",
+        "lv7": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv7.png",
+        "lv8": "assets/good_bacteria/lactobacillus/character/lactobacillus_shoot_lv8.png"
+      }
+    },
+    "leuconostoc": {
+      "role": "mage",
+      "weapon": "spark_orb",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_mage.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv1.png",
+        "lv2": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv2.png",
+        "lv3": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv3.png",
+        "lv4": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv4.png",
+        "lv5": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv5.png",
+        "lv6": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv6.png",
+        "lv7": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv7.png",
+        "lv8": "assets/good_bacteria/leuconostoc/character/leuconostoc_spark_lv8.png"
+      }
+    },
+    "spirillum": {
+      "role": "assassin",
+      "weapon": "ice_shard",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_assassin.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/spirillum/character/spirillum_lv1.webp",
+        "lv2": "assets/good_bacteria/spirillum/character/spirillum_lv2.webp",
+        "lv3": "assets/good_bacteria/spirillum/character/spirillum_lv3.webp",
+        "lv4": "assets/good_bacteria/spirillum/character/spirillum_lv4.webp",
+        "lv5": "assets/good_bacteria/spirillum/character/spirillum_lv5.webp",
+        "lv6": "assets/good_bacteria/spirillum/character/spirillum_lv6.webp",
+        "lv7": "assets/good_bacteria/spirillum/character/spirillum_lv7.webp",
+        "lv8": "assets/good_bacteria/spirillum/character/spirillum_lv8.webp"
+      }
+    },
+    "strepto": {
+      "role": "healer",
+      "weapon": "heart_pellet",
+      "facesRight": true,
+      "chip": "assets/ui/badges/ui_chip_type_healer.png",
+      "levels": {
+        "lv1": "assets/good_bacteria/strepto/character/strepto_heal_lv1.png",
+        "lv2": "assets/good_bacteria/strepto/character/strepto_heal_lv2.png",
+        "lv3": "assets/good_bacteria/strepto/character/strepto_heal_lv3.png",
+        "lv4": "assets/good_bacteria/strepto/character/strepto_heal_lv4.png",
+        "lv5": "assets/good_bacteria/strepto/character/strepto_heal_lv5.png",
+        "lv6": "assets/good_bacteria/strepto/character/strepto_heal_lv6.png",
+        "lv7": "assets/good_bacteria/strepto/character/strepto_heal_lv7.png",
+        "lv8": "assets/good_bacteria/strepto/character/strepto_heal_lv8.png"
+      }
+    }
+  },
+  "weapon_fx": {
+    "bacillus": {
+      "muzzle": [
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t1.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t1_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t2.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t3.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t4.png"
+      ],
+      "impact": [
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t1.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t1_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t2.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t2_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t3.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t3_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t4.png"
+      ],
+      "projectile": [
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t1.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t2.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t3.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t4.png"
+      ],
+      "all": [
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t1.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t1_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t2.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t2_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t3.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t3_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_impact_t4.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t1.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t1_alt.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t2.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t3.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_muzzle_t4.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t1.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t2.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t3.png",
+        "assets/good_bacteria/bacillus/gun_effects/bacillus_rivet_slug_t4.png"
+      ]
+    },
+    "bifido": {
+      "muzzle": [
+        "assets/good_bacteria/bifido/gun_effects/bifido_blue_arrow_muzzle_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t3.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t4.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_muzzle_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_muzzle_t2.png"
+      ],
+      "impact": [
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_impact_01.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_impact_02.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_impact_03.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_impact_01.png"
+      ],
+      "projectile": [
+        "assets/good_bacteria/bifido/gun_effects/bifido_blue_arrow_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_blue_arrow_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_t3.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_t1.png"
+      ],
+      "all": [
+        "assets/good_bacteria/bifido/gun_effects/bifido_blue_arrow_muzzle_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_blue_arrow_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_blue_arrow_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_impact_01.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_impact_02.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_impact_03.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t3.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_muzzle_t4.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_ice_shard_t3.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_impact_01.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_muzzle_t1.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_muzzle_t2.png",
+        "assets/good_bacteria/bifido/gun_effects/bifido_needle_dart_t1.png"
+      ]
+    },
+    "hybrid": {
+      "muzzle": [
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_bolts_gold_cyan.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_bolts_orange_cyan.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_double_barrel.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_double_barrel_gold_sparkle.png"
+      ],
+      "impact": [
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_sparkle_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_sparkle_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_spiral_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_spiral_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_03.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_04.png"
+      ],
+      "projectile": [
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_orbs_swirl.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_orange_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_orange_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_orange_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_03.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_04.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_orange_02.png"
+      ],
+      "all": [
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_sparkle_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_sparkle_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_spiral_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_spiral_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_03.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_impact_starburst_04.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_bolts_gold_cyan.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_bolts_orange_cyan.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_double_barrel.png",
+        "assets/good_bacteria/hybrid/gun_effects/fx_twin_bolts_muzzle_double_barrel_gold_sparkle.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_orbs_swirl.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t1_orange_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2_orange_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t3_orange_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_cyan_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_cyan_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_02.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_03.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_gold_04.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_orange_01.png",
+        "assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t4_orange_02.png"
+      ]
+    },
+    "lactobacillus": {
+      "muzzle": [
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t1.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t2.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t3.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t4.webp"
+      ],
+      "impact": [
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t1.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t2.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t3.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t4.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_pop_01.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_pop_02.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_pop_03.webp"
+      ],
+      "projectile": [
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t1.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t1_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t2.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t2_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t3.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t3_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t4.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t4_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_trail_t1.webp"
+      ],
+      "all": [
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t1.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t2.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t3.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_impact_t4.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t1.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t2.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t3.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t4.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_pop_01.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_pop_02.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_pop_03.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t1.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t1_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t2.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t2_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t3.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t3_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t4.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_t4_alt.webp",
+        "assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_trail_t1.webp"
+      ]
+    },
+    "leuconostoc": {
+      "muzzle": [
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t1.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t2.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t3.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t4.png"
+      ],
+      "impact": [
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_burst_white_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_burst_white_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t1.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t2.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t3.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t4.png"
+      ],
+      "projectile": [
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t1_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t1_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t2_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t2_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t3_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t3_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t4_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t4_02.png"
+      ],
+      "all": [
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_burst_white_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_burst_white_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t1.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t2.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t3.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_impact_t4.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t1.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t2.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t3.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/fx_spark_orb_muzzle_t4.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t1_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t1_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t2_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t2_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t3_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t3_02.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t4_01.png",
+        "assets/good_bacteria/leuconostoc/gun_effects/proj_spark_orb_t4_02.png"
+      ]
+    },
+    "spirillum": {
+      "muzzle": [
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t1.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t2.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t3.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t4.png"
+      ],
+      "impact": [
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_02.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_golden_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_golden_02.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_burst_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_burst_02.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_golden_burst_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_impact_01.png"
+      ],
+      "projectile": [
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_frost_ring_t3.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_frost_ring_t3_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_golden_t4.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_golden_t4_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t1.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t1_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t2.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t2_alt.png"
+      ],
+      "all": [
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_02.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_golden_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_frost_burst_golden_02.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_frost_ring_t3.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_frost_ring_t3_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_golden_t4.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_golden_t4_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t1.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t2.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t3.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t4.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t1.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t1_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t2.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_t2_alt.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_burst_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_burst_02.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_golden_burst_01.png",
+        "assets/good_bacteria/spirillum/gun_effects/spirillum_snowflake_impact_01.png"
+      ]
+    },
+    "strepto": {
+      "muzzle": [
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t1.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t2.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t3.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t4.png"
+      ],
+      "impact": [
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t1.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t2.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t3.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t4.png"
+      ],
+      "projectile": [
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t1_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t1_02.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t2_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t2_02.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t3_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t3_02.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t4_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t4_02.png"
+      ],
+      "all": [
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t1.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t2.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t3.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_impact_t4.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t1.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t2.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t3.png",
+        "assets/good_bacteria/strepto/gun_effects/fx_heart_pellet_muzzle_t4.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t1_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t1_02.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t2_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t2_02.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t3_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t3_02.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t4_01.png",
+        "assets/good_bacteria/strepto/gun_effects/proj_heart_pellet_t4_02.png"
+      ]
+    }
+  },
+  "enemies": {
+    "bloater": {
+      "facesRight": false,
+      "type": "bomb",
+      "levels": {
+        "lv1": "assets/enemy/enemy_bloater_lv1.png",
+        "lv2": "assets/enemy/enemy_bloater_lv2.png",
+        "lv3": "assets/enemy/enemy_bloater_lv3.png",
+        "lv4": "assets/enemy/enemy_bloater_lv4.png"
+      }
+    },
+    "brute": {
+      "facesRight": false,
+      "type": "melee_tank",
+      "levels": {
+        "lv1": "assets/enemy/enemy_brute_lv1.webp",
+        "lv2": "assets/enemy/enemy_brute_lv2.webp",
+        "lv3": "assets/enemy/enemy_brute_lv3.webp",
+        "lv4": "assets/enemy/enemy_brute_lv4.webp"
+      }
+    },
+    "cocci": {
+      "facesRight": false,
+      "type": "swarm_small",
+      "levels": {
+        "lv1": "assets/enemy/enemy_cocci_lv1.png",
+        "lv2": "assets/enemy/enemy_cocci_lv2.png",
+        "lv3": "assets/enemy/enemy_cocci_lv3.png",
+        "lv4": "assets/enemy/enemy_cocci_lv4.png"
+      }
+    },
+    "medic": {
+      "facesRight": true,
+      "type": "healer",
+      "projectile": "assets/effects/proj_syringe.png",
+      "levels": {
+        "lv1": "assets/enemy/enemy_medic_lv1.png",
+        "lv2": "assets/enemy/enemy_medic_lv2.png",
+        "lv3": "assets/enemy/enemy_medic_lv3.png",
+        "lv4": "assets/enemy/enemy_medic_lv4.png"
+      }
+    },
+    "runner": {
+      "facesRight": true,
+      "type": "fast",
+      "levels": {
+        "lv1": "assets/enemy/enemy_runner_lv1.png",
+        "lv2": "assets/enemy/enemy_runner_lv2.png",
+        "lv3": "assets/enemy/enemy_runner_lv3.png",
+        "lv4": "assets/enemy/enemy_runner_lv4.png"
+      }
+    },
+    "shielded": {
+      "facesRight": false,
+      "type": "tank",
+      "levels": {
+        "lv1": "assets/enemy/enemy_shielded_lv1.png",
+        "lv2": "assets/enemy/enemy_shielded_lv2.png",
+        "lv3": "assets/enemy/enemy_shielded_lv3.png",
+        "lv4": "assets/enemy/enemy_shielded_lv4.png"
+      }
+    },
+    "spitter": {
+      "facesRight": true,
+      "type": "ranged",
+      "projectile": "assets/effects/proj_acid_blob.png",
+      "levels": {
+        "lv1": "assets/enemy/enemy_spitter_lv1.webp",
+        "lv2": "assets/enemy/enemy_spitter_lv2.webp",
+        "lv3": "assets/enemy/enemy_spitter_lv3.webp",
+        "lv4": "assets/enemy/enemy_spitter_lv4.webp"
+      }
+    },
+    "splitter": {
+      "facesRight": false,
+      "type": "splitter",
+      "levels": {
+        "lv1": "assets/enemy/enemy_splitter_lv1.webp",
+        "lv2": "assets/enemy/enemy_splitter_lv2.webp",
+        "lv3": "assets/enemy/enemy_splitter_lv3.webp",
+        "lv4": "assets/enemy/enemy_splitter_lv4.webp"
+      }
+    },
+    "swarm": {
+      "facesRight": false,
+      "type": "multi",
+      "levels": {
+        "lv1": "assets/enemy/enemy_swarm_lv1.png",
+        "lv2": "assets/enemy/enemy_swarm_lv2.png",
+        "lv3": "assets/enemy/enemy_swarm_lv3.png",
+        "lv4": "assets/enemy/enemy_swarm_lv4.png"
+      }
+    }
+  },
+  "bosses": {
+    "amoeba_emperor": {
+      "facesRight": false,
+      "levels": {
+        "lv1": "assets/boss/boss_amoeba_emperor_lv1.png",
+        "lv2": "assets/boss/boss_amoeba_emperor_lv2.png",
+        "lv3": "assets/boss/boss_amoeba_emperor_lv3.png",
+        "lv4": "assets/boss/boss_amoeba_emperor_lv4.png"
+      },
+      "attack_fx_frames": [
+        "assets/effects/fx_boss_amoeba_slam_01.png",
+        "assets/effects/fx_boss_amoeba_slam_02.png",
+        "assets/effects/fx_boss_amoeba_slam_03.png",
+        "assets/effects/fx_boss_amoeba_slam_04.png",
+        "assets/effects/fx_boss_amoeba_slam_05.png",
+        "assets/effects/fx_boss_amoeba_slam_06.png"
+      ]
+    },
+    "mega_staph": {
+      "facesRight": false,
+      "levels": {
+        "lv1": "assets/boss/boss_mega_staph_lv1.png",
+        "lv2": "assets/boss/boss_mega_staph_lv2.png",
+        "lv3": "assets/boss/boss_mega_staph_lv3.png",
+        "lv4": "assets/boss/boss_mega_staph_lv4.png"
+      },
+      "attack_fx_frames": [
+        "assets/effects/fx_boss_staph_spore_01.png",
+        "assets/effects/fx_boss_staph_spore_02.png",
+        "assets/effects/fx_boss_staph_spore_03.png",
+        "assets/effects/fx_boss_staph_spore_04.png",
+        "assets/effects/fx_boss_staph_spore_05.png",
+        "assets/effects/fx_boss_staph_spore_06.png"
+      ]
+    },
+    "smog_wraith": {
+      "facesRight": false,
+      "levels": {
+        "lv1": "assets/boss/boss_smog_wraith_lv1.png",
+        "lv2": "assets/boss/boss_smog_wraith_lv2.png",
+        "lv3": "assets/boss/boss_smog_wraith_lv3.png",
+        "lv4": "assets/boss/boss_smog_wraith_lv4.png"
+      },
+      "attack_fx_frames": [
+        "assets/effects/fx_boss_smog_breath_01.png",
+        "assets/effects/fx_boss_smog_breath_02.png",
+        "assets/effects/fx_boss_smog_breath_03.png",
+        "assets/effects/fx_boss_smog_breath_04.png",
+        "assets/effects/fx_boss_smog_breath_05.png",
+        "assets/effects/fx_boss_smog_breath_06.png"
+      ]
+    },
+    "queen": {
+      "facesRight": false,
+      "levels": {
+        "lv1": "assets/boss/queen_lv1.png",
+        "lv2": "assets/boss/queen_lv2.png",
+        "lv3": "assets/boss/queen_lv3.png",
+        "lv4": "assets/boss/queen_lv4.png"
+      },
+      "attack_fx_frames": [
+        "assets/effects/fx_boss_queen_heart_01.png",
+        "assets/effects/fx_boss_queen_heart_02.png",
+        "assets/effects/fx_boss_queen_heart_03.png",
+        "assets/effects/fx_boss_queen_heart_04.png",
+        "assets/effects/fx_boss_queen_heart_05.png",
+        "assets/effects/fx_boss_queen_heart_06.png"
+      ]
+    }
+  },
+  "effects": {
+    "fx_acid_splash": [
+      "assets/effects/fx_acid_splash_01.png",
+      "assets/effects/fx_acid_splash_02.png",
+      "assets/effects/fx_acid_splash_03.png",
+      "assets/effects/fx_acid_splash_04.png",
+      "assets/effects/fx_acid_splash_05.png",
+      "assets/effects/fx_acid_splash_06.png"
+    ],
+    "fx_bomb_explosion": [
+      "assets/effects/fx_bomb_explosion_01.png",
+      "assets/effects/fx_bomb_explosion_02.png",
+      "assets/effects/fx_bomb_explosion_03.png",
+      "assets/effects/fx_bomb_explosion_04.png",
+      "assets/effects/fx_bomb_explosion_05.png",
+      "assets/effects/fx_bomb_explosion_06.png"
+    ],
+    "fx_boss_amoeba_slam": [
+      "assets/effects/fx_boss_amoeba_slam_01.png",
+      "assets/effects/fx_boss_amoeba_slam_02.png",
+      "assets/effects/fx_boss_amoeba_slam_03.png",
+      "assets/effects/fx_boss_amoeba_slam_04.png",
+      "assets/effects/fx_boss_amoeba_slam_05.png",
+      "assets/effects/fx_boss_amoeba_slam_06.png"
+    ],
+    "fx_boss_queen_heart": [
+      "assets/effects/fx_boss_queen_heart_01.png",
+      "assets/effects/fx_boss_queen_heart_02.png",
+      "assets/effects/fx_boss_queen_heart_03.png",
+      "assets/effects/fx_boss_queen_heart_04.png",
+      "assets/effects/fx_boss_queen_heart_05.png",
+      "assets/effects/fx_boss_queen_heart_06.png"
+    ],
+    "fx_boss_smog_breath": [
+      "assets/effects/fx_boss_smog_breath_01.png",
+      "assets/effects/fx_boss_smog_breath_02.png",
+      "assets/effects/fx_boss_smog_breath_03.png",
+      "assets/effects/fx_boss_smog_breath_04.png",
+      "assets/effects/fx_boss_smog_breath_05.png",
+      "assets/effects/fx_boss_smog_breath_06.png"
+    ],
+    "fx_boss_staph_spore": [
+      "assets/effects/fx_boss_staph_spore_01.png",
+      "assets/effects/fx_boss_staph_spore_02.png",
+      "assets/effects/fx_boss_staph_spore_03.png",
+      "assets/effects/fx_boss_staph_spore_04.png",
+      "assets/effects/fx_boss_staph_spore_05.png",
+      "assets/effects/fx_boss_staph_spore_06.png"
+    ],
+    "fx_germ_pop_small": [
+      "assets/effects/fx_germ_pop_small_01.png",
+      "assets/effects/fx_germ_pop_small_02.png",
+      "assets/effects/fx_germ_pop_small_03.png",
+      "assets/effects/fx_germ_pop_small_04.png",
+      "assets/effects/fx_germ_pop_small_05.png",
+      "assets/effects/fx_germ_pop_small_06.png"
+    ],
+    "fx_heal_pulse": [
+      "assets/effects/fx_heal_pulse_01.png",
+      "assets/effects/fx_heal_pulse_02.png",
+      "assets/effects/fx_heal_pulse_03.png",
+      "assets/effects/fx_heal_pulse_04.png",
+      "assets/effects/fx_heal_pulse_05.png",
+      "assets/effects/fx_heal_pulse_06.png"
+    ],
+    "fx_splitter_split": [
+      "assets/effects/fx_splitter_split_01.png",
+      "assets/effects/fx_splitter_split_02.png",
+      "assets/effects/fx_splitter_split_03.png",
+      "assets/effects/fx_splitter_split_04.png",
+      "assets/effects/fx_splitter_split_05.png",
+      "assets/effects/fx_splitter_split_06.png"
+    ],
+    "projectiles": {
+      "proj_acid_blob": "assets/effects/proj_acid_blob.png",
+      "proj_germ_shot": "assets/effects/proj_germ_shot.png",
+      "proj_syringe": "assets/effects/proj_syringe.png"
+    }
+  },
+  "backgrounds": {
+    "bg_basic": "assets/background/bg_basic.png",
+    "bg_basic_portrait": "assets/background/bg_basic_portrait.png",
+    "bg_cold_area": "assets/background/bg_cold_area.png",
+    "bg_cold_portrait": "assets/background/bg_cold_portrait.png",
+    "bg_loading": "assets/background/bg_loading.png",
+    "bg_main_menu": "assets/background/bg_main_menu.jpg",
+    "bg_red_area": "assets/background/bg_red_area.png",
+    "bg_red_portrait": "assets/background/bg_red_portrait.png",
+    "bg_settings": "assets/background/bg_settings.png",
+    "bg_shop": "assets/background/bg_shop.png"
+  },
+  "splash": {
+    "splash_main": "assets/splash/splash_main.png",
+    "splash_portrait": "assets/splash/splash_portrait.png"
+  },
+  "icons": {
+    "icon_ad_ticket": "assets/icon/icon_ad_ticket.png",
+    "icon_app_1024": "assets/icon/icon_app_1024.png",
+    "icon_app_512": "assets/icon/icon_app_512.png",
+    "icon_calendar": "assets/icon/icon_calendar.png",
+    "icon_chest_closed": "assets/icon/icon_chest_closed.png",
+    "icon_chest_open": "assets/icon/icon_chest_open.png",
+    "icon_clock": "assets/icon/icon_clock.png",
+    "icon_codex_book": "assets/icon/icon_codex_book.png",
+    "icon_coin": "assets/icon/icon_coin.png",
+    "icon_crosshair": "assets/icon/icon_crosshair.png",
+    "icon_crown": "assets/icon/icon_crown.png",
+    "icon_dna": "assets/icon/icon_dna.png",
+    "icon_energy_bolt": "assets/icon/icon_energy_bolt.png",
+    "icon_fire_streak": "assets/icon/icon_fire_streak.png",
+    "icon_flask": "assets/icon/icon_flask.png",
+    "icon_gift": "assets/icon/icon_gift.png",
+    "icon_heart": "assets/icon/icon_heart.png",
+    "icon_key": "assets/icon/icon_key.png",
+    "icon_lock": "assets/icon/icon_lock.png",
+    "icon_magnifier": "assets/icon/icon_magnifier.png",
+    "icon_map_pin": "assets/icon/icon_map_pin.png",
+    "icon_medal": "assets/icon/icon_medal.png",
+    "icon_shield": "assets/icon/icon_shield.png",
+    "icon_skull": "assets/icon/icon_skull.png",
+    "icon_star": "assets/icon/icon_star.png",
+    "icon_trophy": "assets/icon/icon_trophy.png"
+  },
+  "mascot": {
+    "mascot_angry": "assets/mascot/mascot_angry.png",
+    "mascot_cheer": "assets/mascot/mascot_cheer.png",
+    "mascot_idle": "assets/mascot/mascot_idle.png",
+    "mascot_point": "assets/mascot/mascot_point.png",
+    "mascot_sad": "assets/mascot/mascot_sad.png",
+    "mascot_sleep": "assets/mascot/mascot_sleep.png",
+    "mascot_surprised": "assets/mascot/mascot_surprised.png",
+    "mascot_think": "assets/mascot/mascot_think.png",
+    "mascot_thumbs_up": "assets/mascot/mascot_thumbs_up.png",
+    "mascot_wave": "assets/mascot/mascot_wave.png"
+  },
+  "ui": {
+    "root": {
+      "fx_gold_sparkle": "assets/ui/fx_gold_sparkle.webp",
+      "ui_ad_badge": "assets/ui/ui_ad_badge.webp",
+      "ui_button_danger": "assets/ui/ui_button_danger.webp",
+      "ui_button_primary": "assets/ui/ui_button_primary.webp",
+      "ui_button_secondary": "assets/ui/ui_button_secondary.webp",
+      "ui_button_tap_to_start": "assets/ui/ui_button_tap_to_start.webp",
+      "ui_checkbox_checked": "assets/ui/ui_checkbox_checked.webp",
+      "ui_checkbox_unchecked": "assets/ui/ui_checkbox_unchecked.webp",
+      "ui_close_button": "assets/ui/ui_close_button.webp",
+      "ui_hand_pointer": "assets/ui/ui_hand_pointer.webp",
+      "ui_loading_bar_fill": "assets/ui/ui_loading_bar_fill.webp",
+      "ui_loading_bar_track": "assets/ui/ui_loading_bar_track.webp",
+      "ui_logo_plate": "assets/ui/ui_logo_plate.webp",
+      "ui_notification_dot": "assets/ui/ui_notification_dot.webp",
+      "ui_progress_circle": "assets/ui/ui_progress_circle.webp",
+      "ui_slider_knob": "assets/ui/ui_slider_knob.webp",
+      "ui_slider_knob_pressed": "assets/ui/ui_slider_knob_pressed.webp",
+      "ui_slider_track": "assets/ui/ui_slider_track.webp",
+      "ui_slider_track_with_fill": "assets/ui/ui_slider_track_with_fill.webp",
+      "ui_star_empty": "assets/ui/ui_star_empty.webp",
+      "ui_star_filled": "assets/ui/ui_star_filled.webp",
+      "ui_star_filled_glint": "assets/ui/ui_star_filled_glint.webp",
+      "ui_star_frame_big": "assets/ui/ui_star_frame_big.webp",
+      "ui_subtitle_tag": "assets/ui/ui_subtitle_tag.webp",
+      "ui_toggle_off": "assets/ui/ui_toggle_off.webp",
+      "ui_toggle_on": "assets/ui/ui_toggle_on.webp",
+      "ui_tutorial_arrow": "assets/ui/ui_tutorial_arrow.webp",
+      "ui_tutorial_ring": "assets/ui/ui_tutorial_ring.webp"
+    },
+    "badges": {
+      "ui_badge_level_1": "assets/ui/badges/ui_badge_level_1.png",
+      "ui_badge_level_2": "assets/ui/badges/ui_badge_level_2.png",
+      "ui_badge_level_3": "assets/ui/badges/ui_badge_level_3.png",
+      "ui_badge_level_4": "assets/ui/badges/ui_badge_level_4.png",
+      "ui_badge_level_5": "assets/ui/badges/ui_badge_level_5.png",
+      "ui_badge_level_6": "assets/ui/badges/ui_badge_level_6.png",
+      "ui_badge_level_7": "assets/ui/badges/ui_badge_level_7.png",
+      "ui_badge_level_8": "assets/ui/badges/ui_badge_level_8.png",
+      "ui_chip_type_assassin": "assets/ui/badges/ui_chip_type_assassin.png",
+      "ui_chip_type_healer": "assets/ui/badges/ui_chip_type_healer.png",
+      "ui_chip_type_mage": "assets/ui/badges/ui_chip_type_mage.png",
+      "ui_chip_type_shooter": "assets/ui/badges/ui_chip_type_shooter.png",
+      "ui_chip_type_sniper": "assets/ui/badges/ui_chip_type_sniper.png",
+      "ui_chip_type_support": "assets/ui/badges/ui_chip_type_support.png",
+      "ui_chip_type_tank": "assets/ui/badges/ui_chip_type_tank.png",
+      "ui_frame_rarity_common": "assets/ui/badges/ui_frame_rarity_common.png",
+      "ui_frame_rarity_epic": "assets/ui/badges/ui_frame_rarity_epic.png",
+      "ui_frame_rarity_legendary": "assets/ui/badges/ui_frame_rarity_legendary.png",
+      "ui_frame_rarity_rare": "assets/ui/badges/ui_frame_rarity_rare.png",
+      "ui_ribbon_new": "assets/ui/badges/ui_ribbon_new.png"
+    },
+    "hub": {
+      "ui_hud_bar_boss_hp_frame": "assets/ui/hub/ui_hud_bar_boss_hp_frame.png",
+      "ui_hud_bar_fill_orange_warning": "assets/ui/hub/ui_hud_bar_fill_orange_warning.png",
+      "ui_hud_bar_fill_purple_boss": "assets/ui/hub/ui_hud_bar_fill_purple_boss.png",
+      "ui_hud_bar_fill_red": "assets/ui/hub/ui_hud_bar_fill_red.png",
+      "ui_hud_bar_fill_teal_progress": "assets/ui/hub/ui_hud_bar_fill_teal_progress.png",
+      "ui_hud_bar_frame_blue_empty": "assets/ui/hub/ui_hud_bar_frame_blue_empty.png",
+      "ui_hud_bar_track_empty": "assets/ui/hub/ui_hud_bar_track_empty.png",
+      "ui_hud_bar_wall_hp_frame": "assets/ui/hub/ui_hud_bar_wall_hp_frame.png",
+      "ui_hud_bar_wave_progress_frame": "assets/ui/hub/ui_hud_bar_wave_progress_frame.png",
+      "ui_hud_enemy_bar_fill_red": "assets/ui/hub/ui_hud_enemy_bar_fill_red.png",
+      "ui_hud_enemy_bar_frame": "assets/ui/hub/ui_hud_enemy_bar_frame.png",
+      "ui_hud_pill_coins": "assets/ui/hub/ui_hud_pill_coins.png",
+      "ui_hud_pill_energy": "assets/ui/hub/ui_hud_pill_energy.png",
+      "ui_hud_pill_wave": "assets/ui/hub/ui_hud_pill_wave.png"
+    },
+    "panels": {
+      "ui_bubble_toast": "assets/ui/panels/ui_bubble_toast.png",
+      "ui_bubble_tutorial": "assets/ui/panels/ui_bubble_tutorial.png",
+      "ui_card_dim_overlay": "assets/ui/panels/ui_card_dim_overlay.png",
+      "ui_card_shop_frame": "assets/ui/panels/ui_card_shop_frame.png",
+      "ui_panel_popup_dark": "assets/ui/panels/ui_panel_popup_dark.png",
+      "ui_panel_popup_main": "assets/ui/panels/ui_panel_popup_main.png",
+      "ui_ribbon_title": "assets/ui/panels/ui_ribbon_title.png",
+      "ui_row_list_frame": "assets/ui/panels/ui_row_list_frame.png",
+      "ui_tab_pair": "assets/ui/panels/ui_tab_pair.png"
+    }
+  },
+  "audio": {
+    "sfx": {
+      "sfx_boss_alert": "assets/audio/sfx/sfx_boss_alert.wav",
+      "sfx_coin": "assets/audio/sfx/sfx_coin.wav",
+      "sfx_explosion": "assets/audio/sfx/sfx_explosion.wav",
+      "sfx_heal": "assets/audio/sfx/sfx_heal.wav",
+      "sfx_hit": "assets/audio/sfx/sfx_hit.wav",
+      "sfx_lose": "assets/audio/sfx/sfx_lose.wav",
+      "sfx_pop": "assets/audio/sfx/sfx_pop.wav",
+      "sfx_shoot": "assets/audio/sfx/sfx_shoot.wav",
+      "sfx_ui_click": "assets/audio/sfx/sfx_ui_click.wav",
+      "sfx_win": "assets/audio/sfx/sfx_win.wav"
+    },
+    "bgm": {
+      "bgm_battle": "assets/audio/bgm/bgm_battle.mp3",
+      "bgm_boss": "assets/audio/bgm/bgm_boss.mp3",
+      "bgm_main_menu": "assets/audio/bgm/bgm_main_menu.mp3"
+    }
+  },
+  "fonts": {
+    "game_ui_bold": "assets/fonts/game_ui_bold.ttf",
+    "game_ui_regular": "assets/fonts/game_ui_regular.ttf"
+  }
+}

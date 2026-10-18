@@ -1,0 +1,17 @@
+priority,item,resolved_path,status
+P0,enemy_bloater_lv2..4,assets/enemy/enemy_bloater_lv2.png .. lv4.png,Completed
+P0,Game SFX (10 wav),assets/audio/sfx/sfx_*.wav,Completed
+P0,Game BGM (3 mp3),assets/audio/bgm/bgm_*.mp3,Completed
+P0,UI Fonts (2 ttf),assets/fonts/game_ui_*.ttf,Completed
+P0,App Icons & Splash,"assets/icon/icon_app_512.png, icon_app_1024.png, assets/splash/splash_*.png",Completed
+P1,Lactobacillus Muzzle FX (t1..t4),assets/good_bacteria/lactobacillus/gun_effects/lactobacillus_bubble_muzzle_t1..t4.webp,Completed
+P1,Spirillum Muzzle FX (t1..t4),assets/good_bacteria/spirillum/gun_effects/spirillum_ice_shard_muzzle_t1..t4.png,Completed
+P1,Boss Attack FX (4 bosses x 6 frames),assets/effects/fx_boss_{amoeba_slam|staph_spore|smog_breath|queen_heart}_01..06.png,Completed
+P1,Enemy Ranged Projectiles,assets/effects/proj_{acid_blob|syringe|germ_shot}.png,Completed
+P1,Hybrid Color Symmetry (8 files),assets/good_bacteria/hybrid/gun_effects/proj_twin_bolts_t2..t4_{gold|cyan|orange}_*.png,Completed
+P1,Generic UI Buttons & Radial Progress,"assets/ui/ui_button_{primary|secondary|danger}.webp, ui_progress_circle.webp",Completed
+P1,Rarity Legendary Frame,assets/ui/badges/ui_frame_rarity_legendary.png,Completed
+P1,"Role Chips (sniper, healer, mage, assassin)",assets/ui/badges/ui_chip_type_{sniper|healer|mage|assassin}.png,Completed
+P1,Shop/Loading/Settings & Portrait Backgrounds,assets/background/bg_{shop|loading|settings|basic_portrait|cold_portrait|red_portrait}.png,Completed
+P2,Mascot angry & idle emotions,assets/mascot/mascot_{angry|idle}.png,Completed
+P2,Cocci lv1..4 visual & scale differentiation,assets/enemy/enemy_cocci_lv1..4.png,Completed
