@@ -1,54 +1,63 @@
-# 🦠 Good Bacteria — Game Asset Repository
+# Bio Defense: Good Bacteria
 
-Production-ready, normalized, and size-optimized 2D game asset repository for **Good Bacteria**.
+A complete, browser-playable tower-defense game built with plain HTML, CSS, and JavaScript. It includes the original campaign, Endless and Daily runs, tutorial, Practice mode, collection and research, upgrades, merging/evolution, bosses, achievements, audio, and saved progress.
 
-## 📊 Summary Metrics (Post-Fix)
+## Run locally
 
-| Metric | Before Audit Fix | After Audit Fix |
-|---|---:|---:|
-| **Total Asset Files** | 363 | **445** (+82 missing assets added) |
-| **Total Size (`assets/`)** | 56.40 MB | **20.69 MB** (✅ well under 40 MB target) |
-| **Player Characters** | 7 × 8 levels (56) | **7 × 8 levels (56)** — all `512×512` (`spirillum` upscaled from `128²`) |
-| **Weapon FX** | 130 (missing muzzles & non-square) | **146** — all `512×512` square canvas + `lactobacillus` & `spirillum` muzzles + `hybrid` color symmetry |
-| **Enemies** | 33 (`bloater` lv2–4 missing, caps in names) | **36 (9 × 4 levels complete)** — lowercase paths, all `512×512` |
-| **Bosses & Boss FX** | 16 bosses, 0 attack FX | **16 bosses + 24 boss attack FX (4 × 6 frames)** |
-| **Common & Projectile FX** | 30 frames, 0 enemy projectiles | **30 common FX + 24 boss FX + 3 enemy projectiles (57 total)** |
-| **UI & Badges** | 62 files (3 role chips, 3 rarity frames) | **71 files** (7 role chips, 4 rarity frames incl. `legendary`, 3 generic buttons, radial progress) |
-| **Backgrounds & Splash** | 4 files (`main menu.png` JPEG mismatch, 1678px width) | **10 backgrounds + 2 splash screens** (all arenas `1679×937` + portrait `937×1679` + shop/loading/settings) |
-| **Icons & Mascot** | 24 icons, 8 mascot emotions | **26 icons** (+`icon_app_512`, `icon_app_1024`) & **10 mascot emotions** (+`angry`, `idle`) |
-| **Audio & Fonts** | 0 | **10 SFX (`.wav`) + 3 BGM (`.mp3`) + 2 UI Fonts (`.ttf`)** |
+Serve the repository root over HTTP (rather than opening `index.html` as a `file://` URL):
 
----
+```sh
+python3 -m http.server 8000
+```
 
-## 📁 Directory Structure
+Then open <http://localhost:8000>. The game has no build step or package dependencies. If the optional CrazyGames SDK is unavailable, gameplay continues without portal or ad integration.
 
-```text
-Good-bacteria-game/
-├── assets/
-│   ├── audio/
-│   │   ├── bgm/                      # bgm_main_menu.mp3, bgm_battle.mp3, bgm_boss.mp3
-│   │   └── sfx/                      # 10 arcade SFX (.wav): shoot, hit, pop, coin, ui_click, heal, explosion, boss_alert, win, lose
-│   ├── background/                   # bg_basic, bg_cold_area, bg_red_area (+portrait variants), bg_main_menu.jpg, bg_shop, bg_loading, bg_settings
-│   ├── boss/                         # 4 bosses × 4 levels (512×512 PNG)
-│   ├── effects/                      # 5 common FX (×6) + 4 boss attack FX (×6) + 3 enemy ranged projectiles (512×512 PNG)
-│   ├── enemy/                        # 9 enemy types × 4 levels = 36 files (all lowercase, 512×512)
-│   ├── fonts/                        # game_ui_bold.ttf, game_ui_regular.ttf
-│   ├── good_bacteria/                # 7 playable characters
-│   │   ├── bacillus/                 # character/ (lv1..8) + gun_effects/ (16)
-│   │   ├── bifido/                   # character/ (lv1..8) + gun_effects/ (17)
-│   │   ├── hybrid/                   # character/ (lv1..8) + gun_effects/ (39, full cyan/gold/orange symmetry)
-│   │   ├── lactobacillus/            # character/ (lv1..8) + gun_effects/ (20, incl. bubble_muzzle_t1..t4)
-│   │   ├── leuconostoc/              # character/ (leuconostoc_spark_lv1..8) + gun_effects/ (18)
-│   │   ├── spirillum/                # character/ (spirillum_lv1..8, 512×512) + gun_effects/ (20, incl. ice_shard_muzzle_t1..t4)
-│   │   └── strepto/                  # character/ (strepto_heal_lv1..8) + gun_effects/ (16)
-│   ├── icon/                         # 24 game icons + icon_app_512.png + icon_app_1024.png
-│   ├── mascot/                       # 10 mascot emotions (cheer, point, sad, sleep, surprised, think, thumbs_up, wave, angry, idle)
-│   ├── splash/                       # splash_main.png (1679×937), splash_portrait.png (937×1679)
-│   └── ui/                           # 28 root widgets (.webp) + badges/ (20) + hub/ (14) + panels/ (9)
-├── ASSETS_REPORT.md                  # Full audit report & resolution log
-├── assets_manifest.json              # Game-ready grouped JSON manifest (paths, facing, pivots, 9-slice)
-├── assets_manifest_fixed.json        # Identical normalized manifest for compatibility
-├── assets_inventory.csv              # 445-row inventory with dimensions, formats, and file sizes
-├── missing_assets_todo.csv           # Completed checklist of all 16 audit groups (82 added files)
-└── fix_asset_names.sh                # Idempotent path/filename normalization script
+## Deploy to Vercel
+
+This is a static site: it has no build step, package install, server-side runtime, or environment variables. Vercel can serve it directly from the repository root.
+
+1. Import this Git repository in Vercel and keep the **Root Directory** as `.`.
+2. Select **Other** as the framework (or leave framework detection unset).
+3. Leave the **Install Command** and **Build Command** empty. If Vercel asks for an **Output Directory**, use `.` so it publishes the root `index.html`, `game.js`, `style.css`, and `assets/` directory together.
+4. Deploy. The game is served at `/`; no SPA rewrite or API configuration is needed.
+
+Alternatively, run `npx vercel` from the repository root and follow the prompts, then use `npx vercel --prod` for a production deployment. The generated `.vercel/` project metadata is ignored by Git.
+
+## Controls
+
+- **Mouse/touch:** drag bacteria from the Lab to the grid; drop matching bacteria together to merge.
+- **Keyboard:** arrows move the selection; Enter places; 1–3 select shop offers; X rerolls; B battles or uses the bomb; Z zaps; H heals; R rallies; P/Esc pauses; F toggles fullscreen.
+- Battles are designed for landscape orientation.
+
+## Root files
+
+The repository root deliberately contains exactly five regular files:
+
+| File | Purpose |
+|---|---|
+| `index.html` | Game screens, controls, canvas, and page metadata |
+| `style.css` | Responsive UI and visual styling |
+| `game.js` | Complete game logic, roster, rendering, input, save system, and local-asset loaders |
+| `README.md` | Project and run instructions |
+| `.gitignore` | Repository ignore rules |
+
+## Local assets
+
+All gameplay artwork and UI fonts load from `assets/`; no sprite data is embedded in the JavaScript. The roster uses eight levels of local art for each of the seven probiotic types. Enemy and boss sprites use the four-level local art sets. These hostile sprites have been mirrored to face left, matching their right-to-left approach toward the body wall. A simple left-facing token is drawn if an enemy image cannot load. Battlefield themes use the bundled background images, with the procedural battlefield retained as a fallback.
+
+Useful asset locations:
+
+- `assets/good_bacteria/` — the seven playable bacteria and their character/weapon art
+- `assets/enemy/` and `assets/boss/` — hostile units and bosses
+- `assets/background/` — battlefields and other game backgrounds
+- `assets/fonts/` — regular and bold UI fonts
+- `assets/mascot/`, `assets/icon/`, `assets/audio/`, and `assets/ui/` — supporting artwork, sounds, and interface assets
+
+## Verification
+
+`game.js` is a classic browser script loaded with `defer`, so the active roster is initialized before the game logic. The game can be checked without a build tool:
+
+```sh
+node --check game.js
+python3 -m http.server 8000
 ```
