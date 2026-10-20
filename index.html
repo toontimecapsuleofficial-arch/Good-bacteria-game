@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1d3d74">
+  <title>Bio Defense: Good Bacteria</title>
+  <link rel="icon" type="image/png" href="assets/icon/icon_app_512.png">
+  <link rel="apple-touch-icon" href="assets/icon/icon_app_512.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.6 1.8 4.6 13.4h5.8L9.2 22.2l10-12.6h-6z" fill="#ffd23f" stroke="#16213e" stroke-width="2.1" stroke-linejoin="round"/><path d="M12.2 5.2 8.4 10.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12.6" r="9" fill="#e8a600" stroke="#16213e" stroke-width="2"/><circle cx="12" cy="11.6" r="8" fill="#ffd23f"/><circle cx="12" cy="12" r="9" fill="none" stroke="#16213e" stroke-width="2"/><path d="M12 7.6v8.4M9.6 9.8h4.8" stroke="#c98d00" stroke-width="2.2" stroke-linecap="round"/><path d="M6.8 9.2a5.6 5.6 0 0 1 3.4-3.2" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8.6-5.1-8.6-11.1C3.4 6.7 5.7 4.6 8.4 4.6c1.6 0 2.9.8 3.6 2.1.7-1.3 2-2.1 3.6-2.1 2.7 0 5 2.1 5 5.3C20.6 15.9 12 21 12 21z" fill="#ff5a6e" stroke="#16213e" stroke-width="2.1" stroke-linejoin="round"/><path d="M6.6 8.6c.4-1.1 1.2-1.7 2.3-1.8" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><rect x="5.6" y="4.6" width="4.6" height="14.8" rx="1.6" fill="currentColor"/><rect x="13.8" y="4.6" width="4.6" height="14.8" rx="1.6" fill="currentColor"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M7.4 4.6v14.8c0 .9 1 1.4 1.7.9l10.6-7.4c.6-.4.6-1.3 0-1.8L9.1 3.7c-.7-.5-1.7 0-1.7.9z" fill="currentColor"/></symbol>
+      <symbol id="i-fs" viewBox="0 0 24 24"><path d="M4 9.4V5.6C4 4.7 4.7 4 5.6 4h3.8M14.6 4h3.8c.9 0 1.6.7 1.6 1.6v3.8M20 14.6v3.8c0 .9-.7 1.6-1.6 1.6h-3.8M9.4 20H5.6C4.7 20 4 19.3 4 18.4v-3.8" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24"><path d="M10.3 2.6h3.4l.6 2.6 1.9.8 2.3-1.4 2.4 2.4-1.4 2.3.8 1.9 2.6.6v3.4l-2.6.6-.8 1.9 1.4 2.3-2.4 2.4-2.3-1.4-1.9.8-.6 2.6h-3.4l-.6-2.6-1.9-.8-2.3 1.4-2.4-2.4 1.4-2.3-.8-1.9-2.6-.6v-3.4l2.6-.6.8-1.9-1.4-2.3 2.4-2.4 2.3 1.4 1.9-.8z" fill="#fff" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.4" fill="#38b6ff" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M5.6 10.4V19c0 .6.4 1 1 1H10v-5.2h4V20h3.4c.6 0 1-.4 1-1v-8.6" fill="#fff" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M3 11.6 12 4l9 7.6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-retry" viewBox="0 0 24 24"><path d="M19.2 12.4a7.2 7.2 0 1 1-2.3-5.6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M18.6 3.2v4.9h-4.9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-next" viewBox="0 0 24 24"><path d="M4.6 12h13M12.4 6.2 18.2 12l-5.8 5.8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="M19.4 12h-13M11.6 6.2 5.8 12l5.8 5.8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-reroll" viewBox="0 0 24 24"><path d="M5 10.6a7.2 7.2 0 0 1 12.6-3.4" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/><path d="M18.2 3.4v4.2H14" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 13.4a7.2 7.2 0 0 1-12.6 3.4" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/><path d="M5.8 20.6v-4.2H10" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-bomb" viewBox="0 0 24 24"><circle cx="10.6" cy="14.2" r="7.4" fill="#16213e"/><circle cx="8.2" cy="11.6" r="2" fill="#fff" opacity=".85"/><path d="M15.4 8.8l2.2-2.2" stroke="#16213e" stroke-width="3" stroke-linecap="round"/><path d="M19.2 1.8l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" fill="#ffd23f" stroke="#16213e" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M9.4 3.8h5.2v5.6h5.6v5.2h-5.6v5.6H9.4v-5.6H3.8V9.4h5.6z" fill="#fff" stroke="#16213e" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+      <symbol id="i-rally" viewBox="0 0 24 24"><path d="M5.4 12.6 12 6l6.6 6.6M5.4 19 12 12.4l6.6 6.6" fill="none" stroke="#16213e" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.4 12.6 12 6l6.6 6.6M5.4 19 12 12.4l6.6 6.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#ffd23f" stroke="#16213e" stroke-width="2.1" stroke-linejoin="round"/><path d="M9.6 9.4l1-2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-star0" viewBox="0 0 24 24"><path d="M12 2.6l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#dfe8f1" stroke="#16213e" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><path d="M8 10.6V8a4 4 0 0 1 8 0v2.6" fill="none" stroke="#16213e" stroke-width="2.6"/><rect x="4.6" y="10.4" width="14.8" height="10.4" rx="2.6" fill="#ffd23f" stroke="#16213e" stroke-width="2.1"/><circle cx="12" cy="15.4" r="1.6" fill="#16213e"/></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="M6.2 21.4V3.6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M6.6 4.2h11.6l-2.6 4 2.6 4H6.6z" fill="#ff5a6e" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3" fill="#fff" stroke="currentColor" stroke-width="2.2"/><path d="M3.4 8c0-1.7 1.3-3 3-3h11.2c1.7 0 3 1.3 3 3v2H3.4z" fill="#ff5a6e" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M8 3v4M16 3v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 12.2l1.1 2.2 2.4.4-1.7 1.7.4 2.4-2.2-1.1-2.2 1.1.4-2.4-1.7-1.7 2.4-.4z" fill="#ffd23f" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10.6" rx="2" fill="#ff6b7a" stroke="currentColor" stroke-width="2.1"/><rect x="3" y="7" width="18" height="4.4" rx="1.6" fill="#ff8f9c" stroke="currentColor" stroke-width="2.1"/><path d="M12 7v13.6" stroke="currentColor" stroke-width="2.1"/><path d="M10.6 11.4h2.8v9.2h-2.8z" fill="#ffd23f"/><path d="M12 7c-1-2.6-4.6-3.6-4.8-1.6C7 7 10.4 7 12 7zm0 0c1-2.6 4.6-3.6 4.8-1.6C17 7 13.6 7 12 7z" fill="#ffd23f" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9.2 3.4h5.6M10.4 3.4v5.6L5 17.8c-.9 1.5.2 3.2 1.9 3.2h10.2c1.7 0 2.8-1.7 1.9-3.2L13.6 9V3.4" fill="#fff" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M7.1 14.6h9.8l1.4 2.4c.4.7-.1 1.5-.9 1.5H6.6c-.8 0-1.3-.8-.9-1.5z" fill="#5ed36a"/><circle cx="10.6" cy="16.6" r="1" fill="#fff"/><circle cx="13.6" cy="15.6" r=".7" fill="#fff"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M3.4 5.4c0-.9.7-1.6 1.6-1.6h5.4c.9 0 1.6.7 1.6 1.6V20c0-.8-.7-1.4-1.6-1.4H5c-.9 0-1.6-.7-1.6-1.6z" fill="#38b6ff" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M20.6 5.4c0-.9-.7-1.6-1.6-1.6h-5.4c-.9 0-1.6.7-1.6 1.6V20c0-.8.7-1.4 1.6-1.4H19c.9 0 1.6-.7 1.6-1.6z" fill="#fff" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+      <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="#fff" stroke="currentColor" stroke-width="2.2"/><path d="M9.3 9.4a2.8 2.8 0 1 1 3.9 2.6c-.8.4-1.2.9-1.2 1.8v.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17.3" r="1.5" fill="currentColor"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.8" y="6" width="13.4" height="12" rx="2.6" fill="#fff" stroke="currentColor" stroke-width="2.2"/><path d="M16.2 10.6l5-3v8.8l-5-3z" fill="#fff" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M7.8 9.4v5.2l4.2-2.6z" fill="currentColor"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.4" width="10" height="19.2" rx="2.6" fill="#fff" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="18.2" r="1.2" fill="currentColor"/></symbol>
+      <symbol id="i-swords" viewBox="0 0 24 24"><path d="M4.4 3.8l9.4 9.4M19.6 3.8l-9.4 9.4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M6.6 14.2l3.2 3.2M17.4 14.2l-3.2 3.2M4.6 19.4l2.4-2.4M19.4 19.4L17 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.4h3.4L12 5.2v13.6l-4.6-4.2H4z" fill="#fff" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M15.4 9a4.2 4.2 0 0 1 0 6M18 6.6a7.6 7.6 0 0 1 0 10.8" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+      <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.4h3.4L12 5.2v13.6l-4.6-4.2H4z" fill="#fff" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M15.6 9.4l5 5.2M20.6 9.4l-5 5.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.6l4.4 4.4L19 7.4" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7.2 3.8h9.6v5.4a4.8 4.8 0 0 1-9.6 0z" fill="#ffd23f" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M7.2 5.6H4.4c0 2.8 1.2 4.4 3.4 4.8M16.8 5.6h2.8c0 2.8-1.2 4.4-3.4 4.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 14v3.4M8.4 20.4h7.2l-.8-3H9.2z" fill="#ffd23f" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+      <symbol id="i-hand" viewBox="0 0 24 24"><path d="M9.4 22c-2-1.7-3.9-4.4-4.7-6.4-.4-1.1.7-2 1.7-1.4l2.2 1.5V4.6a1.6 1.6 0 0 1 3.2 0v6.2l.1-1.3a1.5 1.5 0 0 1 3 .1v1.4a1.5 1.5 0 0 1 3 0v1a1.5 1.5 0 0 1 3 .1v4.6c0 2.4-1.1 4.1-2.4 5.3z" fill="#fff" stroke="#16213e" stroke-width="1.9" stroke-linejoin="round"/><path d="M12 13.4v-2.2M15 13.4V12" stroke="#16213e" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    </defs>
+  </svg>
+
+  <div id="sa" aria-hidden="true"></div>
+
+  <div id="app">
+    <div id="stage" class="ph-prep">
+      <canvas id="cv" aria-label="Battlefield. Drag bacteria onto the grid, merge equal ones, press B to battle. Landscape only."></canvas>
+
+      <header id="hud">
+        <div class="pill" id="wv">Wave 1</div>
+        <div class="wall" id="wall" title="Body Wall">
+          <svg class="ic hrt" aria-hidden="true"><use href="#i-heart"/></svg>
+          <div class="track" role="meter" aria-label="Body Wall health" aria-valuemin="0" aria-valuemax="100">
+            <div id="hpF"></div>
+            <span id="hpN">100</span>
+          </div>
+        </div>
+        <div class="pill en" id="en" title="Energy">
+          <svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>
+          <span id="enN">0</span>
+        </div>
+        <div id="tools">
+          <button class="iconBtn" id="pause" aria-label="Pause (P)"><svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg></button>
+          <button class="iconBtn" id="fs" aria-label="Fullscreen (F)"><svg class="ic" aria-hidden="true"><use href="#i-fs"/></svg></button>
+        </div>
+      </header>
+      <div class="wvBar" id="wvBar" aria-hidden="true"><i id="wvF"></i></div>
+
+      <div id="bossBar" class="hidden" aria-hidden="true">
+        <b id="bbN"></b>
+        <div class="bbT"><i id="bbF"></i><u id="bbS"></u></div>
+      </div>
+
+      <div id="newGerm" class="hidden" role="note">
+        <i id="ngD"></i>
+        <div><b id="ngN"></b><br><span id="ngT"></span></div>
+      </div>
+
+      <div id="pract" class="hidden"></div>
+
+      <div id="tut" class="hidden" aria-live="polite">
+        <div id="spot"></div>
+        <div id="tArrow" aria-hidden="true"></div>
+        <div id="hand" aria-hidden="true"><img class="handImg" src="assets/ui/ui_hand_pointer.webp" alt="" onload="this.parentNode.classList.add('hasImg')" onerror="this.remove()"><svg><use href="#i-hand"/></svg></div>
+        <div id="tbub">
+          <img id="tmas" alt="">
+          <div style="flex:1"><b id="tt"></b><p id="tp"></p></div>
+          <button class="btn" id="tskip">Skip</button>
+        </div>
+      </div>
+
+      <div id="chip" role="status"></div>
+      <div id="toast" class="hidden" role="status"></div>
+
+      <div id="ov" class="hidden" role="dialog" aria-modal="true" aria-labelledby="rib">
+        <div class="card">
+          <div class="rib" id="rib"></div>
+          <p id="ovT"></p>
+          <div id="ovS"></div>
+          <div class="ovBtns">
+            <button class="btn" id="ovB"></button>
+            <button class="btn hidden" id="ovB2"></button>
+          </div>
+        </div>
+      </div>
+
+      <footer id="dock">
+        <div id="shop" role="group" aria-label="Bio Lab shop. Keys 1 to 3 pick an offer, X rerolls.">
+          <div class="offer" tabindex="0" role="button" data-i="0">
+            <div class="blob"><i></i></div>
+            <div class="oi"><b></b><span class="cst"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg><span></span></span></div>
+          </div>
+          <div class="offer" tabindex="0" role="button" data-i="1">
+            <div class="blob"><i></i></div>
+            <div class="oi"><b></b><span class="cst"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg><span></span></span></div>
+          </div>
+          <div class="offer" tabindex="0" role="button" data-i="2">
+            <div class="blob"><i></i></div>
+            <div class="oi"><b></b><span class="cst"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg><span></span></span></div>
+          </div>
+          <button class="iconBtn" id="rr" aria-label="Reroll offers (X)">
+            <svg class="ic" aria-hidden="true"><use href="#i-reroll"/></svg>
+            <span id="rrN"></span>
+          </button>
+        </div>
+
+        <div id="row2">
+          <button class="btn" id="spd" aria-label="Game speed">1×</button>
+          <button class="abil" id="heal" aria-label="Heal the Wall (H)"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg><span>Heal</span><small id="healC">25</small></button>
+          <button class="abil" id="rally" aria-label="Rally (R)"><svg class="ic" aria-hidden="true"><use href="#i-rally"/></svg><span>Rally</span></button>
+          <button class="abil" id="bomb" aria-label="Probiotic Bomb (B in battle)"><svg class="ic" aria-hidden="true"><use href="#i-bomb"/></svg><span>Bomb</span><small id="bombC">40</small></button>
+          <button class="btn" id="go"><svg class="ic" aria-hidden="true"><use href="#i-swords"/></svg><span id="goL">Battle</span></button>
+        </div>
+      </footer>
+    </div>
+
+    <div id="rotate" role="alert">
+      <div class="ph" aria-hidden="true"><svg class="ic"><use href="#i-phone"/></svg></div>
+      <b>Rotate your device</b>
+      <span>Battles play in landscape.</span>
+    </div>
+  </div>
+
+  <div class="screen" id="loadScr" role="dialog" aria-label="Loading Bio Defense: Good Bacteria">
+    <canvas id="lbg" aria-hidden="true"></canvas>
+    <div class="lCenter">
+      <h1 class="lTitle" aria-label="Bio Defense: Good Bacteria">
+        <img class="gLogo lLogo" src="assets/title/file_000000007da88208a925cba36c7869dc.png" alt="" onload="document.documentElement.classList.add('has-logo')" onerror="this.remove()">
+        <span class="lt1" data-t="Bio Defense:">Bio Defense:</span>
+        <span class="lt2">Good Bacteria</span>
+      </h1>
+      <div class="lHeroes" id="lHeroes" aria-hidden="true"></div>
+      <div class="lBox">
+        <div class="lTrack">
+          <div class="lBar" id="lBar" role="progressbar" aria-label="Loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="lFill" id="lFill"></div>
+          </div>
+          <img class="lRun" id="lRun" alt="" aria-hidden="true">
+        </div>
+        <p class="lTip" id="lTip" aria-hidden="true"></p>
+        <div class="lInfo">
+          <span class="lSpin" aria-hidden="true"></span><span id="lStat" aria-live="polite">Preparing the battlefield…</span>
+          <b id="lPct">0%</b>
+        </div>
+        <button class="lGo" id="lGo" type="button" aria-label="Tap to start"><span>Tap to start</span></button>
+      </div>
+    </div>
+    <small class="lStudio" aria-hidden="true">Bilal <b>Studio</b></small>
+    <small id="ver">v1.0</small>
+  </div>
+
+  <div class="screen hidden" id="homeScr">
+    <div class="bgDeco" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+    <div class="col hero">
+      <div>
+        <h1 class="title" data-t="Bio Defense" aria-label="Bio Defense: Good Bacteria"><img class="gLogo hLogo" src="assets/title/file_000000007da88208a925cba36c7869dc.png" alt="" onerror="this.remove()"><span class="tTxt">Bio Defense</span></h1>
+        <p class="subtitle">Good Bacteria</p>
+      </div>
+      <div class="hill"><div class="mascots" id="mas" aria-hidden="true"></div></div>
+      <div class="pill coin" id="hCoins"></div>
+    </div>
+    <div class="col menu">
+      <button class="btn big play" id="hBattle">
+        <span class="pi"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span>
+        <span class="pl"><b>Play</b><small>Endless mode</small></span>
+      </button>
+      <div class="btnGrid">
+        <button class="btn gold" id="hCamp"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg><span>Campaign</span></button>
+        <button class="btn coral" id="hDaily"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span>Daily Challenge</span></button>
+        <button class="btn ghostBtn" id="hToday"><svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg><span>Today</span></button>
+        <button class="btn ghostBtn" id="hLab"><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg><span>Lab</span></button>
+        <button class="btn ghostBtn" id="hCodex"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg><span>Collection</span></button>
+        <button class="btn ghostBtn" id="hHelp"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg><span>How to play</span></button>
+      </div>
+      <div class="homeFoot">
+        <p id="hBest"></p>
+        <button class="iconBtn" id="hSet" aria-label="Settings"><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="labScr">
+    <div class="card wide">
+      <h2><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg>Bio Lab <span id="labCoins" class="pill coin"></span></h2>
+      <div class="list" id="labList"></div>
+      <button class="btn ghostBtn back" data-back><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="todayScr">
+    <div class="card wide">
+      <h2><svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg>Today</h2>
+      <div class="list" id="todayBox"></div>
+      <button class="btn ghostBtn back" data-back><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="campScr">
+    <div class="card wide">
+      <h2><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>Campaign</h2>
+      <div class="list" id="campList"></div>
+      <button class="btn ghostBtn back" data-back><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="codexScr">
+    <div class="card wide">
+      <h2><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Collection</h2>
+      <div class="list" id="codexList"></div>
+      <button class="btn ghostBtn back" data-back><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="helpScr">
+    <div class="card wide">
+      <h2><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg>How to play</h2>
+      <div class="list" id="helpList"></div>
+      <button class="btn ghostBtn back" data-back><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="setScr" role="dialog" aria-modal="true" aria-labelledby="setT">
+    <div class="card">
+      <h2 id="setT"><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg>Settings</h2>
+      <div class="row"><span>Sound</span><button class="btn" id="sSound" aria-pressed="true">On</button></div>
+      <div class="row"><label for="sSfx">Effects</label><input type="range" id="sSfx" min="0" max="1" step=".05"></div>
+      <div class="row"><label for="sMus">Music</label><input type="range" id="sMus" min="0" max="1" step=".05"></div>
+      <div class="row"><span>Reduced motion</span><button class="btn" id="sRm" aria-pressed="false">Off</button></div>
+      <div class="row"><span>Screen shake</span><button class="chk on" id="sShake" role="checkbox" aria-checked="true" aria-label="Screen shake"></button></div>
+      <div class="row"><span>Full particles</span><button class="chk on" id="sParts" role="checkbox" aria-checked="true" aria-label="Full particles"></button></div>
+      <div class="row" id="sFsRow"><span>Fullscreen</span><button class="btn" id="sFs">Toggle</button></div>
+      <p style="font-size:.78em">Arrows move · Enter place · 1-3 pick · B battle or bomb · Z zap · H heal · R rally · X reroll · P or Esc pause · F fullscreen</p>
+      <button class="btn danger" id="sReset"><span>Reset progress</span></button>
+      <button class="btn gold back" id="sBack"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="errScr" role="alertdialog" aria-labelledby="errT">
+    <div class="card">
+      <h2 id="errT">Something went wrong</h2>
+      <p id="errP">The game hit an unexpected error. Your progress is saved.</p>
+      <button class="btn big" id="errB"><svg class="ic" aria-hidden="true"><use href="#i-retry"/></svg><span>Reload</span></button>
+    </div>
+  </div>
+
+  <div id="curtain" aria-hidden="true"></div>
+
+  <script src="game.js" defer></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
